@@ -1,4 +1,4 @@
-# CROWN FURNITURES
+# Crown Furnitures
 
 An e-commerce furniture store built with React to showcase advanced front end development concepts like state management, tests, lazy loading etc.
 
