@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import MenuItem from "../menu-item/menu-item.component";
 
-import sections from "./directory.data";
 import "./directory.styles.scss";
 
+import DIRECTORY_DATA from "./directory.data";
+
 export class Directory extends Component {
-  componentDidMount() {
-    this.state = sections;
+  constructor() {
+    super();
+
+    this.state = { sections: DIRECTORY_DATA };
   }
 
   render() {
     return (
       <div className="directory-menu">
-        {this.state.map(({ id, title, imageUrl, size }) => (
+        {this.state.sections.map(({ id, title, imageUrl, size }) => (
           <MenuItem title={title} key={id} imageUrl={imageUrl} size={size} />
         ))}
       </div>
